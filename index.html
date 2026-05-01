@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Roanoke, Texas — Wireframe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50:  '#F0F9FF',
+                            100: '#E0F2FE',
+                            200: '#BAE6FD',
+                            300: '#7DD3FC',
+                            400: '#38BDF8',
+                            500: '#0EA5E9',
+                            600: '#0284C7',
+                            700: '#0369A1',
+                            800: '#075985',
+                            900: '#0C4A6E',
+                        },
+                        accent: {
+                            50:  '#FFF7ED',
+                            100: '#FFEDD5',
+                            200: '#FED7AA',
+                            300: '#FDBA74',
+                            400: '#FB923C',
+                            500: '#F97316',
+                            600: '#EA580C',
+                            700: '#C2410C',
+                            800: '#9A3412',
+                            900: '#7C2D12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .video-background iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw;
+            min-height: 100vh;
+            min-width: 177.77vh;
+            transform: translate(-50%, -50%);
+            border: none;
+        }
+    </style>
+<base target="_blank">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="bg-white/95 backdrop-blur border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="text-brand-600 font-bold text-xl tracking-tight">
+                        VisitRoanoke<span class="text-brand-800">Texas</span>.com
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-brand-600 text-sm font-medium transition">Things to Do</a>
+                    <a href="#" class="text-gray-600 hover:text-brand-600 text-sm font-medium transition">Dining</a>
+                    <a href="#" class="text-gray-600 hover:text-brand-600 text-sm font-medium transition">Events</a>
+                    <a href="#" class="text-gray-600 hover:text-brand-600 text-sm font-medium transition">Plan Your Visit</a>
+                    <a href="#" class="text-gray-600 hover:text-brand-600 text-sm font-medium transition">About</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-brand-600 p-2 focus:outline-none">
+                        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur border-b border-gray-200">
+            <div class="px-4 pt-2 pb-4 space-y-3">
+                <a href="#" class="block text-gray-600 hover:text-brand-600 text-base font-medium transition py-2">Things to Do</a>
+                <a href="#" class="block text-gray-600 hover:text-brand-600 text-base font-medium transition py-2">Dining</a>
+                <a href="#" class="block text-gray-600 hover:text-brand-600 text-base font-medium transition py-2">Events</a>
+                <a href="#" class="block text-gray-600 hover:text-brand-600 text-base font-medium transition py-2">Plan Your Visit</a>
+                <a href="#" class="block text-gray-600 hover:text-brand-600 text-base font-medium transition py-2">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO WITH VIDEO BACKGROUND ==================== -->
+    <section class="relative h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="video-background">
+            <iframe 
+                src="https://www.youtube.com/embed/q6mRCx-MLMw?autoplay=1&mute=1&loop=1&playlist=q6mRCx-MLMw&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+                title="Roanoke Video"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="absolute inset-0 bg-brand-900/50 z-[1]"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+                Visit Roanoke, Texas
+            </h1>
+            <p class="text-lg md:text-xl text-white/95 mb-8 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)] max-w-2xl mx-auto">
+                Small town charm. Big Texas experiences. Discover dining, events, and adventure in the Unique Dining Capital of Texas.
+            </p>
+            <a href="#" class="group relative inline-flex items-center justify-center px-10 py-4 text-base font-bold text-white bg-accent-500 rounded-full hover:bg-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 overflow-hidden">
+                <span class="relative z-10 flex items-center gap-2">
+                    Plan Your Visit
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </span>
+                <span class="absolute inset-0 overflow-hidden rounded-full">
+                    <span class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== UPCOMING EVENTS STRIP ==================== -->
+    <section class="bg-brand-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-white text-xl font-bold">📅 Upcoming Events</h2>
+                <a href="#" class="text-brand-200 text-sm hover:text-white underline transition">View All Events →</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white/15 backdrop-blur rounded-lg overflow-hidden border border-white/30 hover:bg-white/25 transition cursor-pointer group">
+                    <div class="w-full h-36 overflow-hidden">
+                        <img src="https://s3-media0.fl.yelpcdn.com/bphoto/p1BO18wH_ljzZnxjQuNHTQ/348s.jpg" alt="Taste & Tunes" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-brand-200 text-xs font-semibold uppercase tracking-wide mb-1">🎵 May 15, 2026</p>
+                        <h3 class="text-white font-bold text-sm">Taste & Tunes</h3>
+                    </div>
+                </div>
+                <div class="bg-white/15 backdrop-blur rounded-lg overflow-hidden border border-white/30 hover:bg-white/25 transition cursor-pointer group">
+                    <div class="w-full h-36 overflow-hidden">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/fd/8f/88/photo1jpg.jpg?w=600&h=600&s=1" alt="Farmers Market" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-brand-200 text-xs font-semibold uppercase tracking-wide mb-1">🌽 Every Saturday</p>
+                        <h3 class="text-white font-bold text-sm">Farmers Market</h3>
+                    </div>
+                </div>
+                <div class="bg-white/15 backdrop-blur rounded-lg overflow-hidden border border-white/30 hover:bg-white/25 transition cursor-pointer group">
+                    <div class="w-full h-36 overflow-hidden bg-brand-800 flex items-center justify-center">
+                        <span class="text-brand-200 text-xs font-medium">🎆 July 3rd</span>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-brand-200 text-xs font-semibold uppercase tracking-wide mb-1">🇺🇸 July 3, 2026</p>
+                        <h3 class="text-white font-bold text-sm">July 3rd Celebration</h3>
+                    </div>
+                </div>
+                <div class="bg-white/15 backdrop-blur rounded-lg overflow-hidden border border-white/30 hover:bg-white/25 transition cursor-pointer group">
+                    <div class="w-full h-36 overflow-hidden bg-brand-800 flex items-center justify-center">
+                        <span class="text-brand-200 text-xs font-medium">🎄 December</span>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-brand-200 text-xs font-semibold uppercase tracking-wide mb-1">🎅 December 2026</p>
+                        <h3 class="text-white font-bold text-sm">Hometown Holiday</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== QUICK LINKS / ICON BAR ==================== -->
+    <section class="py-14 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <a href="#" class="flex flex-col items-center group">
+                    <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mb-3 group-hover:bg-brand-500 transition duration-300">
+                        <svg class="w-7 h-7 text-brand-600 group-hover:text-white transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-700 group-hover:text-brand-600 transition">Things to Do</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group">
+                    <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mb-3 group-hover:bg-accent-500 transition duration-300">
+                        <svg class="w-7 h-7 text-brand-600 group-hover:text-white transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-700 group-hover:text-accent-600 transition">Events</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group">
+                    <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mb-3 group-hover:bg-accent-500 transition duration-300">
+                        <svg class="w-7 h-7 text-brand-600 group-hover:text-white transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-700 group-hover:text-accent-600 transition">Dining</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group">
+                    <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mb-3 group-hover:bg-brand-500 transition duration-300">
+                        <svg class="w-7 h-7 text-brand-600 group-hover:text-white transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-700 group-hover:text-brand-600 transition">Hotels</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group">
+                    <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mb-3 group-hover:bg-brand-500 transition duration-300">
+                        <svg class="w-7 h-7 text-brand-600 group-hover:text-white transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0121 18.382V7.618a1 1 0 00-.553-.894L15 7m0 13V7"/></svg>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-700 group-hover:text-brand-600 transition">Plan Trip</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURED EXPERIENCE ==================== -->
+    <section class="py-16 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                    <img src="https://www.roanoketexas.gov/ImageRepository/Document?documentID=4983" alt="Downtown Roanoke dining and shopping" class="w-full h-80 md:h-[28rem] object-cover">
+                </div>
+                <div>
+                    <span class="text-accent-600 text-xs font-bold tracking-widest uppercase mb-2 block">🔥 Featured</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Unique Dining Capital of Texas</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        From craft breweries to upscale steakhouses, Roanoke's dining scene is unlike anywhere else in the Metroplex. Explore our walkable downtown packed with local flavor.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-accent-600 font-bold text-sm hover:text-accent-800 transition group">
+                        Explore Dining
+                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY ROANOKE (EAT / PLAY / STAY) ==================== -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Experience Roanoke</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Whether you're here for a day or a weekend, there's something for everyone.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group cursor-pointer rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-gray-100">
+                    <div class="w-full h-64 overflow-hidden">
+                        <img src="https://s3-media0.fl.yelpcdn.com/bphoto/GTRjw2duPu6b4dT6A5rUAQ/1000s.jpg" alt="Roanoke dining" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-brand-600 mb-2">🍽️ Eat</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Over 40 unique restaurants, from Texas BBQ to global cuisine. Outdoor patios, live music, and local craft drinks await.
+                        </p>
+                    </div>
+                </div>
+                <div class="group cursor-pointer rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-gray-100">
+                    <div class="w-full h-64 overflow-hidden">
+                        <img src="https://cloudfront.traillink.com/photos/bachman-greenbelt-trail_253719_st.jpg" alt="Roanoke trails and parks" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-accent-600 mb-2">🌳 Play</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Hike the Briarwick Nature Trail, catch a game at our ball fields, or challenge friends to pickleball. Adventure is everywhere.
+                        </p>
+                    </div>
+                </div>
+                <div class="group cursor-pointer rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-gray-100">
+                    <div class="w-full h-64 overflow-hidden">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/b2/34/d1/hotel-exterior.jpg?w=1200&h=-1&s=1" alt="Roanoke hotel" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-brand-600 mb-2">🏨 Stay</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Comfortable hotels minutes from downtown. A new convention center is coming soon — making Roanoke the perfect destination.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PARTNERS SECTION ==================== -->
+    <section class="py-16 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">🤝 Our Valued Partners</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Together with our partners, we're building unforgettable experiences in Roanoke.</p>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-12">
+                <div class="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center text-gray-400 font-medium border border-gray-200 hover:shadow-md transition hover:border-brand-200">
+                    <span class="text-sm">Partner Logo</span>
+                </div>
+                <div class="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center text-gray-400 font-medium border border-gray-200 hover:shadow-md transition hover:border-brand-200">
+                    <span class="text-sm">Partner Logo</span>
+                </div>
+                <div class="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center text-gray-400 font-medium border border-gray-200 hover:shadow-md transition hover:border-brand-200">
+                    <span class="text-sm">Partner Logo</span>
+                </div>
+                <div class="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center text-gray-400 font-medium border border-gray-200 hover:shadow-md transition hover:border-brand-200">
+                    <span class="text-sm">Partner Logo</span>
+                </div>
+                <div class="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center text-gray-400 font-medium border border-gray-200 hover:shadow-md transition hover:border-brand-200">
+                    <span class="text-sm">Partner Logo</span>
+                </div>
+                <div class="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center text-gray-400 font-medium border border-gray-200 hover:shadow-md transition hover:border-brand-200">
+                    <span class="text-sm">Partner Logo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER / SOCIAL ==================== -->
+    <section class="py-16 bg-brand-600">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">📧 Stay in the Loop</h2>
+            <p class="text-white/90 mb-8 text-lg">Get the latest events, dining news, and trip ideas delivered to your inbox.</p>
+            <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-10">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-5 py-3.5 rounded-lg border-2 border-white/30 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:border-transparent text-sm shadow-sm bg-white/10 text-white placeholder-white/70">
+                <button type="submit" class="px-8 py-3.5 bg-accent-500 text-white rounded-lg font-bold text-sm hover:bg-accent-600 transition shadow-lg hover:shadow-xl">Subscribe →</button>
+            </form>
+            <div class="flex justify-center space-x-5">
+                <a href="#" class="w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center shadow-sm hover:bg-accent-500 hover:scale-110 transition group">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="#" class="w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center shadow-sm hover:bg-accent-500 hover:scale-110 transition group">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="#" class="w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center shadow-sm hover:bg-accent-500 hover:scale-110 transition group">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-brand-900 text-white py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <div class="text-white font-bold text-lg mb-3">
+                        VisitRoanoke<span class="text-brand-300">Texas</span>.com
+                    </div>
+                    <p class="text-brand-200 text-sm leading-relaxed">Small town charm. Big Texas experiences.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm mb-4 text-brand-100">Explore</h4>
+                    <ul class="space-y-2.5 text-brand-200 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Things to Do</a></li>
+                        <li><a href="#" class="hover:text-white transition">Dining</a></li>
+                        <li><a href="#" class="hover:text-white transition">Events</a></li>
+                        <li><a href="#" class="hover:text-white transition">Hotels</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm mb-4 text-brand-100">Plan</h4>
+                    <ul class="space-y-2.5 text-brand-200 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Visitor Guide</a></li>
+                        <li><a href="#" class="hover:text-white transition">Maps</a></li>
+                        <li><a href="#" class="hover:text-white transition">Itineraries</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm mb-4 text-brand-100">Contact</h4>
+                    <p class="text-brand-200 text-sm mb-2">City of Roanoke, Texas</p>
+                    <p class="text-brand-200 text-sm mb-2">308 S. Walnut Street</p>
+                    <p class="text-brand-200 text-sm mb-2">Roanoke, TX 76262</p>
+                    <p class="text-brand-200 text-sm">(817) 491-2411</p>
+                </div>
+            </div>
+            <div class="mt-10 text-center text-brand-400 text-xs">
+                &copy; 2026 City of Roanoke, Texas. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
