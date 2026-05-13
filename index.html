@@ -66,7 +66,6 @@
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
-    <!-- ==================== NAVIGATION ==================== -->
     <nav class="bg-white/95 backdrop-blur border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
@@ -76,7 +75,6 @@
                     </div>
                 </div>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#" class="text-gray-600 hover:text-brand-600 text-sm font-medium transition">Things to Do</a>
                     <a href="#" class="text-gray-600 hover:text-brand-600 text-sm font-medium transition">Dining</a>
@@ -85,7 +83,6 @@
                     <a href="#" class="text-gray-600 hover:text-brand-600 text-sm font-medium transition">About</a>
                 </div>
                 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-600 hover:text-brand-600 p-2 focus:outline-none">
                         <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,7 +96,6 @@
             </div>
         </div>
         
-        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur border-b border-gray-200">
             <div class="px-4 pt-2 pb-4 space-y-3">
                 <a href="#" class="block text-gray-600 hover:text-brand-600 text-base font-medium transition py-2">Things to Do</a>
@@ -111,7 +107,6 @@
         </div>
     </nav>
 
-    <!-- ==================== HERO WITH VIDEO BACKGROUND ==================== -->
     <section class="relative h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden">
         <div class="video-background">
             <iframe 
@@ -143,7 +138,6 @@
         </div>
     </section>
 
-    <!-- ==================== UPCOMING EVENTS STRIP ==================== -->
     <section class="bg-brand-700 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between mb-6">
@@ -191,7 +185,6 @@
         </div>
     </section>
 
-    <!-- ==================== QUICK LINKS / ICON BAR ==================== -->
     <section class="py-14 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
@@ -229,7 +222,6 @@
         </div>
     </section>
 
-    <!-- ==================== FEATURED EXPERIENCE ==================== -->
     <section class="py-16 bg-brand-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -251,7 +243,6 @@
         </div>
     </section>
 
-    <!-- ==================== WHY ROANOKE (EAT / PLAY / STAY) ==================== -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -259,36 +250,41 @@
                 <p class="text-gray-500 text-lg max-w-2xl mx-auto">Whether you're here for a day or a weekend, there's something for everyone.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
+                <!-- Eat Card: Updated to focus on Food Trucks & Culinary Scene -->
                 <div class="group cursor-pointer rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-gray-100">
                     <div class="w-full h-64 overflow-hidden">
-                        <img src="https://s3-media0.fl.yelpcdn.com/bphoto/GTRjw2duPu6b4dT6A5rUAQ/1000s.jpg" alt="Roanoke dining" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="./img/two people in front of a food truck.jpg" alt="two people in front of a food truck" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-brand-600 mb-2">🍽️ Eat</h3>
+                        <h3 class="text-2xl font-bold text-brand-600 mb-2">🍽️ Savor the Bites</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Over 40 unique restaurants, from Texas BBQ to global cuisine. Outdoor patios, live music, and local craft drinks await.
+                            From gourmet food trucks to legendary local BBQ, Roanoke serves up flavor on every corner. Grab a bite, find a patio, and taste the unique energy of our dining scene.
                         </p>
                     </div>
                 </div>
+
+                <!-- Play Card: Updated to reflect rodeo & Western adventure spirit -->
                 <div class="group cursor-pointer rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-gray-100">
                     <div class="w-full h-64 overflow-hidden">
-                        <img src="https://cloudfront.traillink.com/photos/bachman-greenbelt-trail_253719_st.jpg" alt="Roanoke trails and parks" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="./img/A man riding a bull.jpg" alt="A man riding a bull" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-accent-600 mb-2">🌳 Play</h3>
+                        <h3 class="text-2xl font-bold text-accent-600 mb-2">🤠 Play Like a Texan</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Hike the Briarwick Nature Trail, catch a game at our ball fields, or challenge friends to pickleball. Adventure is everywhere.
+                            Saddle up for adventure! Catch thrilling rodeo events, explore wide‑open parks, or take in a concert under the stars. Roanoke knows how to play big.
                         </p>
                     </div>
                 </div>
+
+                <!-- Stay Card: Updated to connect to downtown & civic pride (city hall image) -->
                 <div class="group cursor-pointer rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-gray-100">
                     <div class="w-full h-64 overflow-hidden">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/b2/34/d1/hotel-exterior.jpg?w=1200&h=-1&s=1" alt="Roanoke hotel" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="./img/An aerial photo of the city hall.webp" alt="An aerial photo of the city hall" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-brand-600 mb-2">🏨 Stay</h3>
+                        <h3 class="text-2xl font-bold text-brand-600 mb-2">🏨 Stay in the Heart</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Comfortable hotels minutes from downtown. A new convention center is coming soon — making Roanoke the perfect destination.
+                            Cozy hotels, modern stays, and a brand‑new convention center on the way. Being steps from downtown means you’re always close to the celebration.
                         </p>
                     </div>
                 </div>
